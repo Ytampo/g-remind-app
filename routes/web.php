@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 // 以下のuseはmiddlewareエラー回避のため追記したもの
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
+// 以下はローカルでエラー判定するのを防ぐためのもの
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
